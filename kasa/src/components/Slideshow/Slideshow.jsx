@@ -40,11 +40,11 @@ export default function Slideshow({ slides }) {
 					}
 				>
 					{index === current && <img src={slide} alt="appartement à louer" />}
-					{index === current && (
-						<span className="slider__number">
-							{current + 1}/{length}
-						</span>
-					)}
+                    {index === current && length > 1 && (
+                    <span className="slider__number">
+                        {current + 1}/{length}
+                    </span>
+                    )}
 				</div>
 			))}
 		</section>
