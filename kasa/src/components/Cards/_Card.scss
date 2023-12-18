@@ -1,31 +1,29 @@
 .card-logement {
     position: relative;
-    display: flex;
-    width: 335px;
-    height: 255px;
     @include small-radius;
     min-width: 335px;
     transition: transform 1s;
-
+    
+    &:hover,
+    &:focus {
+        @include boxShadow;
+    }
+    
     @media screen and (min-width: $breakpoint-desktop) {
+        display: flex;
         width: 340px;
         height: 340px;
-
-        &:hover,
-        &:focus {
-            @include boxShadow;
-        }
     }
-
+    
     & img {
         display: flex;
         width: 100%;
         @include small-radius;
         object-fit: cover;
     }
-
+    
     &__layer {
-        display: flex;
+        // display: flex;
         align-items: center;
         position: absolute;
         bottom: 0;
@@ -51,14 +49,14 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    gap: 20px;
     @include small-radius;
     margin: 22px 0;
     flex-wrap: wrap;
-
+    gap: 22px;
+    
     @media screen and (min-width: $breakpoint-desktop) {
-        gap: 50px;
         padding: 5% 1%;
+        gap: 50px;
         background-color: #f7f7f7;
         @include big-radius;
         margin: 43px 0;
